@@ -1,0 +1,163 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CarnegieMellonGraphics2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\KEITHH~1\LOCALS~1\Temp\RSP33.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\..\src" /I ".\include" /I ".\include\pthread" /I ".\include\gltt" /I ".\include\glut" /I ".\include\libjpeg" /I ".\include\libpng" /I ".\include\zlib" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/CarnegieMellonGraphics2.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\KEITHH~1\LOCALS~1\Temp\RSP33.tmp" 
+Creating temporary file "C:\DOCUME~1\KEITHH~1\LOCALS~1\Temp\RSP34.tmp" with contents
+[
+/nologo /out:"Debug\CarnegieMellonGraphics2.lib" 
+".\Debug\Color.obj"
+".\Debug\Daemon.obj"
+".\Debug\DaemonCommand.obj"
+".\Debug\DaemonImp.obj"
+".\Debug\Debugging.obj"
+".\Debug\EditableImage.obj"
+".\Debug\Font.obj"
+".\Debug\GLUTImp.obj"
+".\Debug\Image.obj"
+".\Debug\KeyboardEvent.obj"
+".\Debug\KeyModifiers.obj"
+".\Debug\LeakWatcher.obj"
+".\Debug\MouseEvent.obj"
+".\Debug\NamedKey.obj"
+".\Debug\PortMutex.obj"
+".\Debug\Style.obj"
+".\Debug\TimerEvent.obj"
+".\Debug\Transform.obj"
+".\Debug\Window.obj"
+".\Debug\WindowManager.obj"
+".\lib\pthread.lib"
+".\lib\gltt.lib"
+".\lib\glut32.lib"
+".\lib\libjpeg.lib"
+".\lib\libpng.lib"
+".\Debug\randgen.obj"
+".\Debug\utlimate.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\KEITHH~1\LOCALS~1\Temp\RSP34.tmp"
+<h3>Output Window</h3>
+Compiling...
+utlimate.cpp
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\field.h(24) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(20) : error C2146: syntax error : missing ';' before identifier 'shirt'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(20) : error C2501: 'Color' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(20) : error C2501: 'shirt' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(21) : error C2146: syntax error : missing ';' before identifier 'runleft'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(21) : error C2501: 'Image' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(21) : error C2501: 'runleft' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(21) : error C2501: 'runright' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(22) : error C2146: syntax error : missing ';' before identifier 'standleft'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(22) : error C2501: 'Image' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(22) : error C2501: 'standleft' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(22) : error C2501: 'standright' : missing storage-class or type specifiers
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(34) : error C2061: syntax error : identifier 'Color'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(132) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(160) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(169) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\player.h(174) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\frisbee.h(29) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\frisbee.h(38) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\frisbee.h(131) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\frisbee.h(158) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\team.h(36) : error C2061: syntax error : identifier 'Color'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\team.h(94) : error C2061: syntax error : identifier 'Window'
+c:\documents and settings\keith hackbarth\desktop\ultimate\cmu\source test\build\win32\vs6\team.h(103) : error C2061: syntax error : identifier 'Window'
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(40) : error C2065: 'Window' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(40) : error C2146: syntax error : missing ';' before identifier 'test'
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(40) : error C2065: 'test' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(44) : error C2065: 'Color' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(49) : error C2228: left of '.disableAutoPageFlip' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(51) : error C2065: 'TimerEvent' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(51) : error C2146: syntax error : missing ';' before identifier 'clock'
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(51) : error C2228: left of '.startTimer' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(55) : error C2228: left of '.waitForTimerEvent' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(59) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(59) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(59) : error C2065: 'ESCAPE' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(79) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(84) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(84) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(84) : error C2065: 'LEFT_ARROW' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(87) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(87) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(87) : error C2065: 'RIGHT_ARROW' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(90) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(90) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(90) : error C2065: 'UP_ARROW' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(94) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(94) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(94) : error C2065: 'DOWN_ARROW' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(100) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(103) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(106) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(110) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(127) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(131) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(136) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(140) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(145) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(155) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(158) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(168) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(196) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(200) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(205) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(207) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(212) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(212) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(215) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(215) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(218) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(218) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(221) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(221) : error C2653: 'NamedKey' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(226) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(229) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(232) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(235) : error C2228: left of '.isKeyDown' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2228: left of '.drawText' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2065: 'Style' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2653: 'Color' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2065: 'WHITE' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2065: 'Font' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2653: 'Font' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2065: 'ROMAN' : undeclared identifier
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(250) : error C2228: left of '.getHeight' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(251) : error C2228: left of '.drawText' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(251) : error C2653: 'Color' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(251) : error C2653: 'Font' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(251) : error C2228: left of '.getHeight' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(251) : error C2228: left of '.numberToString' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(252) : error C2228: left of '.drawText' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(252) : error C2653: 'Color' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(252) : error C2653: 'Font' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(252) : error C2228: left of '.getHeight' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(253) : error C2228: left of '.drawText' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(253) : error C2653: 'Color' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(253) : error C2653: 'Font' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(253) : error C2228: left of '.getHeight' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(253) : error C2228: left of '.numberToString' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(256) : error C2228: left of '.drawText' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(256) : error C2653: 'Color' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(256) : error C2653: 'Font' : is not a class or namespace name
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(256) : error C2228: left of '.getWidth' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(256) : error C2228: left of '.getHeight' must have class/struct/union type
+C:\Documents and Settings\Keith Hackbarth\Desktop\Ultimate\CMU\source test\build\win32\vs6\utlimate.cpp(256) : fatal error C1003: error count exceeds 100; stopping compilation
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+CarnegieMellonGraphics2.lib - 102 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

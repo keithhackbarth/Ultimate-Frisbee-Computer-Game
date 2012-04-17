@@ -1,0 +1,473 @@
+RockNES X
+a nintendo entertainment system (8-bit) emulator
+
+First release (version 1.0): March 9th, 2000
+This release (version 2.0): April 14th, 2002
+
+developed by Alexandre da Veiga
+original DOS version (RockNES) developed by Fx3 (fx3rnes@hotmail.com)
+
+www.rocknes.kinox.org
+-----------------------------------------------------------------------------------------------------------
+
+INDEX
+
+1.  Disclaimer
+2.  Warning about bad dumps
+3.  Minimum Requirements
+4.  RockNES X description/features
+5.  Playing with RockNES X: the basics
+6.  Netplay
+7.  Optimizing the RockNES X performance
+8.  About the RockNES X development
+9.  The RockNES X History (development progress)
+10. Special thanks
+-----------------------------------------------------------------------------------------------------------
+
+1. DISCLAIMER
+
+I am not affiliated with Nintendo or any other company, nor advocate the piracy of
+Nintendo games. This software is freeware, for absolutely non-commercial use. It may
+be distribute freely *as is* (non-modified). Commercial games cannot be packaged with
+this emulator. When you use this software you do so at your own risk.
+The author cannot be responsible for any loss or damage resulting from the use or
+misuse of this software.
+-----------------------------------------------------------------------------------------------------------
+
+2. WARNING ABOUT BAD DUMPS (BAD ROMS)
+
+There are tons of bad dumps, most of them with incorrect information in its header.
+Use a tool that is able to recognize the rom content and fix its header.
+-----------------------------------------------------------------------------------------------------------
+
+3. MINIMUM REQUIREMENTS
+
+- Pentium MMX or greater processor
+- a 3D (Direct3D-compatible) videocard for 3D support
+- A DirectSound-compatible soundcard
+
+- Microsoft DIRECTX 8.1 (get it from www.microsoft.com/directx if you don't have it)
+- Windows 98/ME/2000/XP supported
+
+Netplay recommended requirements:
+
+- xDSL, cable or LAN connection
+-----------------------------------------------------------------------------------------------------------
+
+4. ROCKNES X DESCRIPTION/FEATURES
+
+This software is a Nintendo Entertainment System 8-bit (NES) emulator. This is the
+Windows version for the original RockNES developed for DOS (by fx3).
+
+What is emulated:
+
+ - NES 2A03 CPU (by Metthey Conte);
+ - NES 2C02 PPU emulation with scanline gfx engine;
+ - NES I/O;
+ - Sound emulation of all 5 channels: pulses, triangle, noise and PCM;
+ - Video Palette, very close to real NES;
+ - Color emphasis and monochrome mode;
+ - WorkRAM (battery);
+ - Accurate emulation of sprite #0 hits;
+ - Accurate emulation of PPU I/O (pass ok in the test program).
+
+ The following extra hardware is also emulated:
+
+ - Konami's jap. VRCVI sound hardware emulation (used by Akumajou Densetsu/Madara);
+ - VS Unisystem arcade machines (missing linked-system) in iNES format;
+ - Famicom DiskSystem, emulated as mapper #20 (BIOS 'disksys.rom' required,
+   must to be in the same directory of the RockNESX executable);
+ - Mappers: 0,1,2,3,4,5,6,7,8,9,10,11,13,15,16,17,18,19,20,21,22,23,24,25,26,
+   32,33,34,40,41,42,43,44,57,64,65,66,67,68,69,70,71,72,73,75,76,78,79,83,85,
+   88,90,91,92,94,97,99,100,101,110,113,117,118,119,151,160,180,184,187,189,225,
+   226,227,228,229,230,231,232,233,234,235,240,243,246 and 255.
+   
+   Most of these 85 mappers have full support.
+ 
+ These extra features are also provided:
+ 
+ - NES Movies (record/play);
+ - Save states;
+ - NESticle saved state loading (partially supported);
+ - Game Genie codes
+
+ The X features:
+
+ - Video at any resolution/color depth supported by the videocard
+ - Full Screen and Windowed modes
+ - Stretched video mode;
+ - 256x224 alternate video mode;
+ - Scanlines support;
+ - Full 3D Hardware support (faster)
+ - Joystick support;
+ - Netplay support (TCP/IP, IPX, serial, modem), including remote savestate loading;
+ - Screenshot support (video buffer and NES buffer modes);
+ - SuperEAGLE, Super2xSai, 2xSai video filtering;
+ - Command line support
+ - ZIP file support
+
+ About command line support:
+
+ You can use ROCKNESX <romfile> to start a game from the prompt, or to
+ create game shortcuts.
+
+ About Zip support:
+
+ The RockNES X loads the first NES file found in a .zip file.
+-----------------------------------------------------------------------------------------------------------
+
+5. PLAYING WITH ROCKNES X: THE BASICS
+
+ a) Configuring your ROMs path
+
+ To load a ROM, you can simply use the menu option File->Open and Play ROM, choose
+ a file and begin playing. Although, the preferred way is to tell RockNES X where your
+ ROMs are located, so they you show up in the GUI every time you start the
+ emulator. To do this, use the menu option Options->Folders and add the folders where
+ your ROMs are located. You can also tell RockNES X to look for ROMs in the subfolders.
+ Since the ROM names and locations are stored in a file (to allow the fast startup),
+ use the menu option View->Refresh Game List when you change the location of a ROM
+ file.
+
+ b) Default Controls
+
+ Player 1:
+
+ UP, DOWN, LEFT, RIGHT - keyboard arrow keys
+ A - 'X' key
+ B - 'Z' key
+ SELECT - Right Shift
+ START - Enter
+
+ During the emulation, the following keys are also available:
+
+ ESC - Stop the emulation
+
+ F1 - Show this list of keys
+ F2 - Save a state in the current slot
+ F3 - Increase the slot number
+ Shift + F3 - Decrease the slot number
+ F4 - Load a state from the current slot
+ F5 - Reset (Soft Reset)
+ F6 - FDS Disk Side Change
+ F7 - FDS Disk Insert/Eject
+ F9 - Start/Stop movie recording (using the current slot)
+ F10 - Start/Stop movie playing (using the current slot)
+ F11 - Toggle between full screen and windowed mode
+ F12 - Take screenshot
+
+ These commands are also available on the GUI (when using windowed mode).
+
+ c) Configuration
+
+ Use the options in the 'Options' menu to configure the video, audio and controllers.
+ For performance tips, check out the 'Optimizing the RockNES X performance' section.
+ 
+ note: the config file (rockconfig.dat) is created when you run RockNES X the first
+ time or when it is in an older/invalid format. This file contains machine-specific
+ information.
+
+-----------------------------------------------------------------------------------------------------------
+ 
+6. NETPLAY
+
+ a) To play a game using the netplay, both players must have the ROM file with the
+ exact same name. The ZIP format is fully supported, so the following scenarios are
+ allowed:
+
+ [Player 1] - romname.nes   [Player 2] - romname.nes
+ [Player 1] - romname.nes   [Player 2] - romname.zip
+ [Player 1] - romname.zip   [Player 2] - romname.nes
+ [Player 1] - romname.zip   [Player 2] - romname.zip
+
+ b) To start a netplay game, use the option menu Netplay->Start. If you select to
+ play as player 1, a netplay session will be started. The player 2 then have to
+ connect to the player 2 machine to start a game:
+
+ Playing as player 1:
+
+ - Select 'play as player 1' and click 'Start'. The connection window will show up.
+   Wait until the player 2 connects. 
+
+ Playing as player 2:
+
+ - Select 'play as player 2' and click 'Start'. Enter the player 1's machine address
+   when prompted. The connection window will show up.
+
+ From this point, any player can invite the other player to start a game.
+ The players can play many different games without having to repeat the process above.
+ The netplay mode ends only when the menu option Netplay->Stop is selected.
+
+ note: the emulation will run at the slowest machine's pace.
+
+ c) About the netplay buffer
+
+ This buffer may be usually set to a value a little bit higher than the ping value.
+ The higher this value is the slower is the control response.
+ Both players can change this value.
+
+ d) Remote Loading
+
+ The remote save state loading is supported by RockNES X. So, when you load a save
+ state, it will be remotely sent to the remote player. This may take a while depending
+ on the connection speed.
+----------------------------------------------------------------------------------------------------------- 
+
+7. OPTIMIZING THE ROCKNES X PERFORMANCE
+
+ a) Emulation Speed
+
+ The RockNES X must run at 60 'emulation frames per second' at all times, so the games
+ are emulated at the correct speed. The emulation is ONLY cpu-dependant, so any
+ machine with a Pentium 200 or better processor should run the emulation at full speed.
+ If this is not happening, try the following procedures:
+
+ 1) If you are running Windows 2000/XP or above, go to Options->Advanced and set
+ Emulation to 'Time Critical'. This setting will tell the emulator to run the emulation
+ with the maximum precision. No relevant processing time is consumed doing this. This is
+ not true for Windows ME or older systems, so try settings above the recommended
+ value, but not too high.
+
+ 2) The video rendering is so slow that it's requiring too many CPU processing. In this
+ case, select a slower resolution, disable any video filtering or scanline support.
+ Usually the video is faster using the 3D video hardware, so try it. As a last alternative,
+ go to Options->Advanced and set the video setting to a lower value.
+
+ b) Video
+
+ The RockNES X video speed relies basically in the video driver/hardware. It will render as
+ many frames as possible (at a maximum rate of 60 fps). Try different video modes to find
+ out which ones are better handled by your videocard. For slower videocards, try
+ 320x240x8 resolution. For faster (newer) videocards, the video should never be an
+ issue, except when using video filtering, because this mode also uses a lot of cpu
+ processing.
+
+ c) Sound
+
+ The default value for the sound buffer is 66 ms. This value is very conservative and
+ should work with most sound cards. Although, if you have a good sound card (such as
+ Sound Blaster Live! or Audigy) and a fast cpu, you can try lower values, to reduce the
+ lag between what you are seeing and what you are hearing. If fact, the value 33ms
+ means that the maximum lag between the emulation and the sound is 33ms. Since
+ RockNES X uses double/triple buffering for the video, the lag between the video and
+ the sound is virtually zero.
+
+ If you are experiencing sound 'popups', try to increase the sound buffer size. If this also
+ doesn't help, try increasing the audio priority at Options->Advanced.
+ 
+ d) System Performance Examples:
+
+ Using 800x600, 32 bit color, 2D/3D
+
+ Pentium 233 cpu, Trident videocard: 60 fps (emulation), 35 fps (video)
+ Pentium II 300MHz cpu, TNT2 videocard: 60 fps (emulation), 60 fps (video)
+ Pentium III 1GHz cpu, Trident videocard: 60 fps (emulation), 10-30 fps (video)
+ Athlon 1.2GHz, Sis6326 videocard: 60 fps (emulation), 40 fps (video)
+ Athlon 1.2GHz, GeForce3 videocard: 60 fps (emulation), 60 fps (video)
+-----------------------------------------------------------------------------------------------------------
+
+8. ABOUT THE ROCKNES X DEVELOPMENT
+
+ The c/c++ code is compiled with Microsoft Visual C++ compiler.
+ The x86 assembly code is compiled with NASM.
+ The GUI is developed with the MFC framework.
+ The video/audio/input/netplay code is developed with DirectX 8.1.
+
+ The RockNES X contains about 30000 lines of code.
+
+ The RockNES X runs in four basic threads (code running in parallel):
+
+ - GUI thread (to control the GUI, basic requests, message control)
+ - Video Thread (video rendering)
+ - Audio Thread (audio thread)
+ - Emulation Thread (emulation core)
+ 
+ (other threads are added for netplay)
+
+ That's why RockNES X can run with ultra-low audio latency, full emulation
+ speed even with very slow audio/video cards and auto video frameskip.
+-----------------------------------------------------------------------------------------------------------
+
+9. THE ROCKNES X HISTORY
+
+ Version 2.0 final
+
+ - AUDIO, GUI: SERIOUS bug fixed in the sound setup: the soundcard information was
+   being incorrectly stored. This fixes some odd errors on audio initialization.
+ - GUI: Fixed a few typos.
+ - GUI: Removed the warning telling that the filtering mode is not supported when
+   running with 3D Hardware support
+ - GUI: The GUI was not using correctly the rocklist.dat file during the startup. Fixed.
+ - GUI: fixed a bug that was preventing the list of ROMs to show the last rom in some
+   cases.
+ - INPUT: Fixed a bug that was causing the joystick to stop working after a video mode
+   switch (during the emulation)
+ - INPUT: In some systems the keyboard was starting to beep after a few minutes of
+   continuous play. Bug is fixed.
+ - VIDEO: new multithreaded gfx engine: now the emulation is able to run at full speed
+   even if very slow videocards. The gfx engine will try to render the maximum number of
+   frames possible (60 fps is the maximum). This means auto frameskip support.
+ - VIDEO: added official video filtering support (MMX cpu required)
+ - VIDEO: 2D slow blit fixed
+ - VIDEO: SERIOUS bug fixed when switching video modes during the emulation. This fixes
+   random crashes when the emulation is stopped
+ - VIDEO: Many fixed bugs in the video filtering mode
+ - VIDEO: Fixed many bugs that was avoiding the full screen mode to resume after the
+   window is minimized
+ - VIDEO: The RockNES X help in-game text was moving incorrectly using
+   windowed and 2D mode.
+ - CORE: fixed some memory access violation bugs 
+ - CORE: sync (to maintain the emulator at 60 fps) greatly improved
+ - CORE: frames per second measurement improved
+ - CORE: Gamegenie support added
+ - CORE: In some systems after the RockNES X was closed the desktop was affected.
+ - CORE: command line support fixed
+ - CORE: .dat format updated
+ - EMU: based on the latest rocknes release.
+ - NETPLAY: added support to .zip filenames (even when the remote side has a .nes file)
+ - NETPLAY: fixed a bug that would cause the emulator to crash when the initialization fails
+   in the remote side
+ - NETPLAY: Added support to have a .zip file in one side and a .nes file in the other.
+ - NETPLAY: In some cases the player 1 would have to wait for a long time after stopping
+   the netplay mode. Fixed.
+ - NETPLAY: Fixed the loss of sync when switching the video mode during the emulation
+ - NETPLAY: Fixed the loss of sync after a remote save state loading
+ - NETPLAY: The temp dir (used to store a remote savestate) was not set correcly. This
+   could prevent non-admin users to use such feature under Windows 2000/XP.
+ - README: readme text greatly improved!
+
+ Version 2.0 beta2
+
+ - The battery save is FINALLY working
+ - The GUI menu item File->Play Selected Rom has been fixed
+ - Now RockNES X stores the roms list in a file (rocklist.dat), so it do not need to search for
+   your 5000 roms every time the emu is started :)
+ - The way screenshots are named has changed. Now, the screenshots are automatically
+   saved as <romname> 0.bmp, <romname> 1.bmp... <romname> N.bmp. It is not
+   needed to change the slot to save different shots during the gameplay. Using the
+   old system (slots), you could save up to 10 shots per game. Now this number has been
+   increased to 4 billion :)
+
+ Version 2.0 beta1
+
+ This is the first beta release of the RockNESX 2. It has new features, such as Netplay,
+ 3D mode, Zip support.
+
+ DIRECTX 8 NEEDED!!!!!
+
+ - The way RockNES X and the RockNES core interacts has been completely rewritten
+ - Input Control partially rewritten (major joystick bugs fixed)
+ - Sound Engine rewritten: the output quality is better and the lag has gone away :)
+ - Added 48kHz support to the Sound Engine
+ - Sound Device selection fixed
+ - The audio buffer size can be configured now
+ - Scanline support rewritten. This new version is MUCH faster
+ - Now it is possible to toggle between Windowed and Full Screen Mode while playing
+   (using the F11 key)
+ - 3D Hardware Support added (of course using bilinear filtering!)
+ - Font Engine Optimized and partially rewritten, to support the 3D mode
+ - Frameskip support removed (due to the RockNES emulation core requirements)
+ - The Screenshot system has been improved and also supports the 3D mode
+ - The GUI has been improved (lots of bug fixed, things added/removed)
+ - The Folders dialog now has the "look subfolders" option
+ - The .dat (the RockNES X config file) format has changed, to support more options and
+   future format updates
+ - Netplay mode (support for TCP/IP, serial port, IPX and modem2modem). Remote
+   savestate loading is also supported
+ - Several other bug fixes
+ - Error handling HEAVILY improved
+ - Zip support added (finally! :))
+ - In sync with the latest RockNES source (1.9x).
+
+ Version 1.61
+
+ - This new RockNES X version can be 40-120% faster than the previous version.
+ - Added triple buffering
+ - 8 bit rendering engine optimized
+ - Auto frameskip added (highly recommended!)
+ - Ppu code optimized
+ - Now RockNES X creates automatically the savegames, movies and battery save
+   directories when necessary.
+ - Battery save fixed
+ - Added screenshot support
+ - all the emulation core is in sync with the newest RockNES (DOS) version.
+
+ Version 1.42
+
+ - Windows 2000 bug solved!
+ - Small GUI problems fixed (now you know when the ROM is incorrect)
+ - Better noise emulation (by Fx3)
+
+ Version 1.41
+
+ -Improved Rendering Engine
+ -Windowed Mode Support
+ -VS Palettes Support
+ -Pause Key
+ -Improved Joystick Support
+ -GUI bug fixes
+ -GUI support for NES, VS and FDS roms
+ -and... ALL the core is in sync with the newest RockNES (DOS) version.
+  (TONS of changes to describe here!)
+
+ Version 1.201
+
+ - Joystick mapping fixed
+ - Now you can play again with sound disabled ;o)
+
+ Version 1.2
+
+ - Joystick support!!!!
+ - Load Game fixed
+ - GUI improvements and fixes
+ - New artwork
+ - New Font Engine
+ - Pixel Interpolation (if supported by the hardware)
+ - Scanline modes added
+ - The 16-bit mode is now compatible with old videocards
+ - 24-bit mode fixed
+ - 8-bit color palette now is 100% correct
+ - new synchronism system: now the video is smooth even on ultra-fast machines
+ - now a thread controls the sound output. Many sound related problems (mainly with
+   slow machines) were solved
+ - Command line support. Now you can type "RockNESX game.nes" or create shortcuts to
+   your favorite games!
+ - A ROM can be loaded by a Windows standard load file dialog (you asked for it...
+   so you got it!)
+ - FULLY compliant with the RockNES 1.06 (newest DOS version)
+
+ Version 1.05
+
+ - All the emulation related changes in the rocknes 1.05 (dos) release
+ - Minor speed improvements in the rendering engine
+ - High color and True Color modes support (16, 24, 32 bits)
+  - if supported by hardware, the stretched mode uses pixel interpolation...
+    on a Viper 770 it looks just great!
+  - in newer video cards (like Viper770), the 16-bit mode is faster than the 8-bit mode
+ - 2 players support (thanks!)
+ - The keys are now configurable
+ - now the configurations are saved when are editing them, not only when you close
+   the RockNES X
+ - the savestate format changed (because of the new CPU core)
+ - Better sound output
+ - New keyboard controls
+ - Now the GUI supports files with any extension
+ - GUI bug fixes
+ - General code optimization
+ - Minor bug fixes
+
+ Version 1.0
+
+ - First release
+-----------------------------------------------------------------------------------------------------------
+
+10. SPECIAL THANKS TO
+
+ Fx3 - for all the emulation core!
+ Roberto - for all the support and testing!
+ Luiz - for the artwork!
+ everyone else - that helped me developing this piece of software
+-----------------------------------------------------------------------------------------------------------
+
+KEEP PLAYING... KEEP THE DREAM ALIVE.
+RockNES X 2.0, 2002

@@ -1,0 +1,59 @@
+		Initializing .... 
+
+Total memory allocated = 5452148
+		Begin Printing Seed information
+
+Seed point: 16 8 	Path 0 0 	User path -1 -1 -1
+
+---------------------
+
+Print path: 
+
+
+
+[16 8] 
+
+		Begin Printing Seed information
+
+Seed point: 16 8 	Path 0 1 	User path 0 63 0
+
+Seed point: 15 8 	Path 2 2 	User path 63 63 63
+
+---------------------
+
+Print path: 
+
+
+
+[16 8] [15 8] [15 8] 
+
+User path
+
+
+[16 8] [16 8] [16 8] [15 8] [15 8] [15 8] [15 8] 
+[15 8] [15 8] [15 8] [15 8] [14 8] [14 8] [14 8] 
+[14 8] [14 8] [14 8] [14 8] [14 8] [13 8] [13 8] 
+[13 8] [13 8] [13 7] [13 7] [13 7] [13 7] [13 7] 
+[13 7] [13 7] [13 7] [13 6] [13 6] [13 6] [13 6] 
+[13 6] [13 5] [13 5] [13 6] [13 6] [13 6] [13 7] 
+[13 7] [13 7] [13 8] [13 8] [13 8] [13 8] [13 8] 
+[13 8] [13 8] [13 8] [13 8] [13 8] [13 8] [13 8] 
+[14 8] [14 8] [14 8] [14 8] [14 8] [15 8] [15 8] 
+[15 8] [15 8] [15 8] [15 8] [15 8] [15 8] [15 8] 
+
+		Begin Printing Seed information
+
+Seed point: 16 8 	Path 0 1 	User path 0 63 0
+
+Seed point: 15 8 	Path 2 2 	User path 63 70 63
+
+Seed point: 15 8 	Path 3 3 	User path 70 70 70
+
+---------------------
+
+Print path: 
+
+
+
+[16 8] [15 8] [15 8] [15 8] 
+
